@@ -9,154 +9,149 @@
 </head>
 <body>
     <div class="container">
+        <h1>Script de atendimentos Liberação técnica</h1>
+        
         <div class="tabs">
-            <button class="tab-button active" onclick="showTab('interno')">Interno</button>
-            <button class="tab-button" onclick="showTab('externo')">Externo</button>
-            <button class="tab-button" onclick="showTab('remocao')">Remoção de Porta - Mudança de Endereço</button>
-            <button class="tab-button" onclick="showTab('saudacoes')">Saudações</button>
-        </div>
-        
-        <div id="interno" class="tab-content active">
-            <h1>Interno</h1>
-            <div class="form-section">
-                <p class="message">Certo tudo correto, vou enviar a validação.</p>
-                <form>
-                    <label for="protocolo_interno">Protocolo:</label>
-                    <input type="text" id="protocolo_interno" name="protocolo">
-                    
-                    <label for="instalacao_lacre_onu_interno">Instalação e lacre ONU:</label>
-                    <input type="text" id="instalacao_lacre_onu_interno" name="instalacao_lacre_onu" value="OK">
-                    
-                    <label for="acesso_roteador_interno">Acesso ao roteador:</label>
-                    <input type="text" id="acesso_roteador_interno" name="acesso_roteador" value="OK">
-                    
-                    <label for="user_interno">User:</label>
-                    <input type="text" id="user_interno" name="user">
-                    
-                    <label for="senha_interno">Senha:</label>
-                    <input type="password" id="senha_interno" name="senha">
-                    
-                    <label for="sinal_conector_interno">Sinal - Conector Interno:</label>
-                    <input type="text" id="sinal_conector_interno" name="sinal_conector_interno">
-                    
-                    <label for="sinal_onu_interno">Sinal - ONU:</label>
-                    <input type="text" id="sinal_onu_interno" name="sinal_onu">
-                    
-                    <label for="equipamentos_interno">Equipamentos:</label>
-                    <input type="text" id="equipamentos_interno" name="equipamentos" value="OK">
-                    
-                    <label for="pat_onu_interno">Pat. ONU:</label>
-                    <input type="text" id="pat_onu_interno" name="pat_onu">
-                    
-                    <label for="pat_roteador_interno">Pat. Roteador:</label>
-                    <input type="text" id="pat_roteador_interno" name="pat_roteador">
-                    
-                    <label for="pat_repetidor_interno">Pat. Repetidor:</label>
-                    <input type="text" id="pat_repetidor_interno" name="pat_repetidor">
-                    
-                    <label for="pat_equipamento_retirado_interno">Pat. Equipamento retirado:</label>
-                    <input type="text" id="pat_equipamento_retirado_interno" name="pat_equipamento_retirado">
-                    
-                    <label for="teste_interno">Teste:</label>
-                    <input type="text" id="teste_interno" name="teste" value="OK">
-                    
-                    <hr>
-                    
-                    <button type="button" onclick="copiarDados('interno', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
-                    <button type="button" onclick="limparCampos('interno')">Limpar Campos</button>
-                </form>
-                <p>Ajudo em algo mais?</p>
-            </div>
-        </div>
-        
-        <div id="externo" class="tab-content">
-            <h1>Externo</h1>
-            <div class="form-section">
-                <p class="message">Certo tudo correto, vou enviar a validação.</p>
-                <form>
-                    <label for="protocolo_externo">Protocolo:</label>
-                    <input type="text" id="protocolo_externo" name="protocolo">
-                    
-                    <label for="instalacao_lacre_onu_externo">Instalação e lacre ONU:</label>
-                    <input type="text" id="instalacao_lacre_onu_externo" name="instalacao_lacre_onu" value="OK">
-                    
-                    <label for="acesso_roteador_externo">Acesso ao roteador:</label>
-                    <input type="text" id="acesso_roteador_externo" name="acesso_roteador" value="OK">
-                    
-                    <label for="documentacao_geogrid">Documentação GEOGRID:</label>
-                    <input type="text" id="documentacao_geogrid" name="documentacao_geogrid" value="OK">
-                    
-                    <label for="identificacao_cto">Identificação CTO:</label>
-                    <input type="text" id="identificacao_cto" name="identificacao_cto">
-                    
-                    <label for="porta_externo">Porta:</label>
-                    <input type="text" id="porta_externo" name="porta">
-                    
-                    <label for="usuario_externo">Usuário:</label>
-                    <input type="text" id="usuario_externo" name="usuario">
-                    
-                    <label for="senha_externo">Senha:</label>
-                    <input type="password" id="senha_externo" name="senha">
-                    
-                    <label for="equipamentos_externo">Equipamentos:</label>
-                    <input type="text" id="equipamentos_externo" name="equipamentos" value="OK">
-                    
-                    <label for="sinal_conector_externo">Sinal - Conector Externo:</label>
-                    <input type="text" id="sinal_conector_externo" name="sinal_conector_externo">
-                    
-                    <label for="sinal_conector_interno_externo">Sinal - Conector Interno:</label>
-                    <input type="text" id="sinal_conector_interno_externo" name="sinal_conector_interno">
-                    
-                    <label for="sinal_onu_externo">Sinal - ONU:</label>
-                    <input type="text" id="sinal_onu_externo" name="sinal_onu">
-                    
-                    <label for="pat_onu_externo">Pat. ONU:</label>
-                    <input type="text" id="pat_onu_externo" name="pat_onu">
-                    
-                    <label for="pat_roteador_externo">Pat. Roteador:</label>
-                    <input type="text" id="pat_roteador_externo" name="pat_roteador">
-                    
-                    <label for="pat_repetidor_externo">Pat. Repetidor:</label>
-                    <input type="text" id="pat_repetidor_externo" name="pat_repetidor">
-                    
-                    <label for="pat_equipamento_retirado_externo">Pat. Equipamento retirado:</label>
-                    <input type="text" id="pat_equipamento_retirado_externo" name="pat_equipamento_retirado">
-                    
-                    <label for="teste_externo">Teste:</label>
-                    <input type="text" id="teste_externo" name="teste" value="OK">
-                    
-                    <label for="obs">OBS:</label>
-                    <input type="text" id="obs" name="obs">
-                    
-                    <hr>
-                    
-                    <button type="button" onclick="copiarDados('externo', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
-                    <button type="button" onclick="limparCampos('externo')">Limpar Campos</button>
-                </form>
-                <p>Ajudo em algo mais?</p>
-            </div>
+            <div class="tab-button active" onclick="showTab('interno')">Interno</div>
+            <div class="tab-button" onclick="showTab('externo')">Externo</div>
+            <div class="tab-button" onclick="showTab('remocao')">Remoção</div>
+            <div class="tab-button" onclick="showTab('saudacoes')">Saudações</div>
         </div>
 
-        <div id="remocao" class="tab-content">
-            <h1>Remoção de Porta - Mudança de Endereço</h1>
+        <div class="tab-content active" id="interno">
+            <h2>Interno</h2>
+            <p class="message">Certo tudo correto, vou enviar a validação.</p>
             <form>
-                <label for="codigo_remocao">Código:</label>
-                <input type="text" id="codigo_remocao" name="codigo">
+                <label>Protocolo:</label>
+                <input type="text" name="protocolo">
                 
-                <label for="nome_cliente">Nome do Cliente:</label>
-                <input type="text" id="nome_cliente" name="nome_cliente">
+                <label>Instalação e lacre ONU:</label>
+                <input type="text" name="instalacao_lacre_onu" value="OK">
                 
-                <label for="antigo_ponto_acesso">Antigo Ponto de Acesso:</label>
-                <input type="text" id="antigo_ponto_acesso" name="antigo_ponto_acesso">
+                <label>Acesso ao roteador:</label>
+                <input type="text" name="acesso_roteador" value="OK">
                 
-                <label for="novo_ponto_acesso">Novo Ponto de Acesso:</label>
-                <input type="text" id="novo_ponto_acesso" name="novo_ponto_acesso">
+                <label>User:</label>
+                <input type="text" name="user">
                 
-                <label for="data_mudanca">Data da Mudança:</label>
-                <input type="date" id="data_mudanca" name="data_mudanca">
+                <label>Senha:</label>
+                <input type="password" name="senha">
                 
-                <label for="observacoes">Observações:</label>
-                <input type="text" id="observacoes" name="observacoes">
+                <label>Sinal - Conector Interno:</label>
+                <input type="text" name="sinal_conector_interno">
+                
+                <label>Sinal - ONU:</label>
+                <input type="text" name="sinal_onu">
+                
+                <label>Equipamentos:</label>
+                <input type="text" name="equipamentos" value="OK">
+                
+                <label>Pat. ONU:</label>
+                <input type="text" name="pat_onu">
+                
+                <label>Pat. Roteador:</label>
+                <input type="text" name="pat_roteador">
+                
+                <label>Pat. Repetidor:</label>
+                <input type="text" name="pat_repetidor">
+                
+                <label>Pat. Equipamento retirado:</label>
+                <input type="text" name="pat_equipamento_retirado">
+                
+                <label>Teste:</label>
+                <input type="text" name="teste" value="OK">
+                
+                <hr>
+                
+                <button type="button" onclick="copiarDados('interno', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
+                <button type="button" onclick="limparCampos('interno')">Limpar Campos</button>
+            </form>
+            <p>Ajudo em algo mais?</p>
+        </div>
+        
+        <div class="tab-content" id="externo">
+            <h2>Externo</h2>
+            <p class="message">Certo tudo correto, vou enviar a validação.</p>
+            <form>
+                <label>Protocolo:</label>
+                <input type="text" name="protocolo">
+                
+                <label>Instalação e lacre ONU:</label>
+                <input type="text" name="instalacao_lacre_onu" value="OK">
+                
+                <label>Acesso ao roteador:</label>
+                <input type="text" name="acesso_roteador" value="OK">
+                
+                <label>Documentação GEOGRID:</label>
+                <input type="text" name="documentacao_geogrid" value="OK">
+                
+                <label>Identificação CTO:</label>
+                <input type="text" name="identificacao_cto">
+                
+                <label>Porta:</label>
+                <input type="text" name="porta">
+                
+                <label>Usuário:</label>
+                <input type="text" name="usuario">
+                
+                <label>Senha:</label>
+                <input type="password" name="senha">
+                
+                <label>Equipamentos:</label>
+                <input type="text" name="equipamentos" value="OK">
+                
+                <label>Sinal - Conector Externo:</label>
+                <input type="text" name="sinal_conector_externo">
+                
+                <label>Sinal - Conector Interno:</label>
+                <input type="text" name="sinal_conector_interno">
+                
+                <label>Sinal - ONU:</label>
+                <input type="text" name="sinal_onu">
+                
+                <label>Pat. ONU:</label>
+                <input type="text" name="pat_onu">
+                
+                <label>Pat. Roteador:</label>
+                <input type="text" name="pat_roteador">
+                
+                <label>Pat. Repetidor:</label>
+                <input type="text" name="pat_repetidor">
+                
+                <label>Pat. Equipamento retirado:</label>
+                <input type="text" name="pat_equipamento_retirado">
+                
+                <label>Teste:</label>
+                <input type="text" name="teste" value="OK">
+                
+                <label>OBS:</label>
+                <input type="text" name="obs">
+                
+                <hr>
+                
+                <button type="button" onclick="copiarDados('externo', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
+                <button type="button" onclick="limparCampos('externo')">Limpar Campos</button>
+            </form>
+            <p>Ajudo em algo mais?</p>
+        </div>
+
+        <div class="tab-content" id="remocao">
+            <h2>Remoção</h2>
+            <form>
+                <label>Código:</label>
+                <input type="text" name="codigo">
+                
+                <label>Nome do Cliente:</label>
+                <input type="text" name="nome_cliente">
+                
+                <label>Antigo Ponto de Acesso:</label>
+                <input type="text" name="antigo_ponto_acesso">
+                
+                <label>Porta:</label>
+                <input type="text" name="porta">
+                
+                <label>Localização CTO:</label>
+                <input type="text" name="localizacao_cto">
                 
                 <hr>
                 
@@ -164,9 +159,9 @@
                 <button type="button" onclick="limparCampos('remocao')">Limpar Campos</button>
             </form>
         </div>
-        
-        <div id="saudacoes" class="tab-content">
-            <h1>Saudações</h1>
+
+        <div class="tab-content" id="saudacoes">
+            <h2>Saudações</h2>
             <div class="message-area">
                 <button type="button" class="copy-button" onclick="copiarMensagem('Bom dia, Sou o atendente Denison, vou ser responsável pelo seu atendimento.')">Bom dia, Sou o atendente Denison, vou ser responsável pelo seu atendimento.</button>
                 <button type="button" class="copy-button" onclick="copiarMensagem('Boa tarde, Sou o atendente Denison, vou ser responsável pelo seu atendimento.')">Boa tarde, Sou o atendente Denison, vou ser responsável pelo seu atendimento.</button>
@@ -177,10 +172,7 @@
                 <button type="button" class="copy-button" onclick="copiarMensagem('Já realizei as movimentações.')">Já realizei as movimentações.</button>
                 <button type="button" class="copy-button" onclick="copiarMensagem('Movimentações ok')">Movimentações ok</button>
                 <button type="button" class="copy-button" onclick="copiarMensagem('O cliente testou a conexão?')">O cliente testou a conexão?</button>
-                <button type="button" class="copy-button" onclick="copiarMensagem('Obrigado, bom trabalho! 🫡')">Obrigado, bom trabalho! 🫡</button>
-                <button type="button" class="copy-button" onclick="copiarMensagem('Por nada, bom trabalho! 🫡')">Por nada, bom trabalho! 🫡</button>
-                <button type="button" class="copy-button" onclick="copiarMensagem('Maravilha, bom trabalho! 🫡')">Maravilha, bom trabalho! 🫡</button>
-                <button type="button" class="copy-button" onclick="copiarMensagem('Agradeço seu contato, tenha um bom dia! 🫡')">Agradeço seu contato, tenha um bom dia! 🫡</button>
+                <button type="button" class="copy-button" onclick="copiarMensagem('Caso o cliente solicite a inclusão de serviços, oriente-o a entrar em contato com o suporte.')">Caso o cliente solicite a inclusão de serviços, oriente-o a entrar em contato com o suporte.</button>
             </div>
         </div>
     </div>
