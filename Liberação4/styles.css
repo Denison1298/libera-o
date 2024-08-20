@@ -129,3 +129,14 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+
+.footer-logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 70px;
+    max-width: 100%;
+}
