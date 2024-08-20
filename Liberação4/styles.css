@@ -130,6 +130,15 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
     z-index: 1000;
 }
 
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+}
+
+
 .footer-logo {
     text-align: center;
     margin-top: 20px;
@@ -137,6 +146,6 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 }
 
 .footer-logo img {
-    height: 100px;
+    height: 70px;
     max-width: 100%;
 }
