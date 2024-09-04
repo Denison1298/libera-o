@@ -1,9 +1,9 @@
 body {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #f8f9fa, #e0eafc);
+    background-color: #23395d; /* Cor sólida de fundo */
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #ffffff; /* Cor do texto */
 }
 
 .container {
@@ -11,8 +11,8 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
+    background: #23395d;
+    border-radius: 8px; /* Ajustado para bordas arredondadas */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 .tab-button {
-    background-color: #e9ecef;
+    background-color: #c4c632;
     border: 1px solid #ccc;
     border-bottom: none;
     padding: 12px 24px;
@@ -56,7 +56,7 @@ label {
     display: block;
     margin: 14px 0 8px;
     font-weight: 700;
-    color: #495057;
+    color: #ffffff;
 }
 
 input[type="text"], input[type="password"], input[type="date"] {
@@ -83,8 +83,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 .form-section button {
     padding: 14px 28px;
     margin-right: 10px;
-    background-color: #0056b3;
-    color: #ffffff;
+    background-color: #2e07dd; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto */
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -92,35 +92,54 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 }
 
 .form-section button:hover {
-    background-color: #004099;
+    background-color: #004099; /* Cor de fundo ao passar o mouse */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o botão "Copiar Tudo" */
+.copy-button {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 10px; /* Espaço acima do botão */
+    background-color: #0056b3; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.copy-button:hover {
+    background-color: #004099; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+/* Estilo para o botão "Limpar Campos" */
+.clear-button {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 10px; /* Espaço acima do botão */
+    background-color: #dc3545; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.clear-button:hover {
+    background-color: #c82333; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 .message {
     margin-bottom: 24px;
     font-style: italic;
-    color: #6c757d;
+    color: #ffffff;
 }
 
 .message-area {
     margin: 24px 0;
-}
-
-.message-area .copy-button {
-    display: block;
-    padding: 14px;
-    margin-top: 5px;
-    background-color: #0056b3;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.message-area .copy-button:hover {
-    background-color: #004099;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .notification {
@@ -141,7 +160,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 .footer-text {
     margin-top: 24px;
     font-size: 14px;
-    color: #6c757d;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -152,7 +171,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 100px;
     max-width: 100%;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
 }
