@@ -1,8 +1,9 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0eafc);
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 .container {
@@ -11,36 +12,36 @@ body {
     margin: 20px auto;
     padding: 20px;
     background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
     display: flex;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #0056b3;
     margin-bottom: 20px;
 }
 
 .tab-button {
-    background-color: #f1f1f1;
+    background-color: #e9ecef;
     border: 1px solid #ccc;
     border-bottom: none;
     padding: 12px 24px;
     cursor: pointer;
     margin-right: 5px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 12px 12px 0 0;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .tab-button.active {
     background-color: #ffffff;
-    border-bottom: 2px solid #007bff;
-    color: #007bff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #0056b3;
+    color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tab-button:hover {
-    background-color: #e9ecef;
+    background-color: #dfe6f2;
 }
 
 .tab-content {
@@ -53,73 +54,73 @@ body {
 
 label {
     display: block;
-    margin: 12px 0 6px;
-    font-weight: 600;
-    color: #333;
+    margin: 14px 0 8px;
+    font-weight: 700;
+    color: #495057;
 }
 
 input[type="text"], input[type="password"], input[type="date"] {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin: 5px 0 20px;
     border: 1px solid #ced4da;
-    border-radius: 6px;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus {
-    border-color: #007bff;
+    border-color: #0056b3;
     outline: none;
 }
 
 .form-section hr {
-    margin: 20px 0;
-    border: 1px solid #e9ecef;
+    margin: 24px 0;
+    border: 1px solid #dfe6f2;
 }
 
 .form-section button {
-    padding: 12px 24px;
+    padding: 14px 28px;
     margin-right: 10px;
-    background-color: #007bff;
+    background-color: #0056b3;
     color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .form-section button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: #004099;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .message {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-style: italic;
     color: #6c757d;
 }
 
 .message-area {
-    margin: 20px 0;
+    margin: 24px 0;
 }
 
 .message-area .copy-button {
     display: block;
-    padding: 12px;
+    padding: 14px;
     margin-top: 5px;
-    background-color: #007bff;
+    background-color: #0056b3;
     color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .message-area .copy-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: #004099;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .notification {
@@ -130,15 +131,15 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
     transform: translateX(-50%);
     background-color: #28a745;
     color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 14px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     font-size: 16px;
 }
 
 .footer-text {
-    margin-top: 20px;
+    margin-top: 24px;
     font-size: 14px;
     color: #6c757d;
     text-align: center;
@@ -146,11 +147,12 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 
 .footer-logo {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .footer-logo img {
     height: 70px;
     max-width: 100%;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
 }
