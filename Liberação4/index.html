@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script de atendimentos Liberação técnica</title>
+    <title>Liberação técnica</title>
     <link rel="icon" href="https://cdn.7az.com.br/d1611e66-4224-4070-a693-c4921b7fb63a/7c73cbfd-ce62-48f4-826b-63893fcd5439.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Script de atendimentos Liberação técnica</h1>
+        <h1>Script</h1>
         
         <div class="tabs">
             <div class="tab-button active" onclick="showTab('interno')">Interno</div>
@@ -63,8 +63,8 @@
                 
                 <hr>
                 
-                <button type="button" onclick="copiarDados('interno', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
-                <button type="button" onclick="limparCampos('interno')">Limpar Campos</button>
+                <button type="button" class="copy-button" onclick="copiarDados('interno', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
+                <button type="button" class="clear-button" onclick="limparCampos('interno')">Limpar Campos</button>
             </form>
             <p>Ajudo em algo mais?</p>
         </div>
@@ -129,8 +129,8 @@
                 
                 <hr>
                 
-                <button type="button" onclick="copiarDados('externo', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
-                <button type="button" onclick="limparCampos('externo')">Limpar Campos</button>
+                <button type="button" class="copy-button" onclick="copiarDados('externo', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
+                <button type="button" class="clear-button" onclick="limparCampos('externo')">Limpar Campos</button>
             </form>
             <p>Ajudo em algo mais?</p>
         </div>
@@ -155,8 +155,8 @@
                 
                 <hr>
                 
-                <button type="button" onclick="copiarDados('remocao', '', '')">Copiar Tudo</button>
-                <button type="button" onclick="limparCampos('remocao')">Limpar Campos</button>
+                <button type="button" class="copy-button" onclick="copiarDados('remocao', '', '')">Copiar Tudo</button>
+                <button type="button" class="clear-button" onclick="limparCampos('remocao')">Limpar Campos</button>
             </form>
         </div>
 
