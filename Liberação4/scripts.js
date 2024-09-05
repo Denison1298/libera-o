@@ -1,3 +1,4 @@
+// Função para exibir a aba clicada
 function showTab(tabId) {
     // Ocultar todas as abas
     const tabs = document.querySelectorAll('.tab-content');
@@ -16,17 +17,20 @@ function showTab(tabId) {
     activeButton.classList.add('active');
 }
 
+// Função para mostrar notificações
 function showNotification(message) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
     notification.style.display = 'block';
 }
 
+// Função para ocultar notificações
 function hideNotification() {
     const notification = document.getElementById('notification');
     notification.style.display = 'none';
 }
 
+// Função para copiar dados do formulário para a área de transferência
 function copiarDados(formId, sectionMessage, footerMessage) {
     const form = document.getElementById(formId);
     let dados = `${sectionMessage}\n`;
@@ -46,6 +50,7 @@ function copiarDados(formId, sectionMessage, footerMessage) {
     });
 }
 
+// Função para limpar campos do formulário
 function limparCampos(formId) {
     const form = document.getElementById(formId);
     const inputs = form.querySelectorAll('input');
@@ -59,6 +64,7 @@ function limparCampos(formId) {
     });
 }
 
+// Função para copiar mensagem para a área de transferência
 function copiarMensagem(mensagem) {
     navigator.clipboard.writeText(mensagem).then(() => {
         showNotification('Mensagem copiada para a área de transferência!');
@@ -67,4 +73,37 @@ function copiarMensagem(mensagem) {
     });
 }
 
+// Função para alterar o nome do atendente nas mensagens de saudação
+function alterarNomeAtendente() {
+    var nomeAtendente = document.getElementById("nomeAtendente").value || "Denison"; // Nome padrão "Denison" se não for preenchido
+    
+    // Armazenar o nome no localStorage
+    localStorage.setItem('nomeAtendente', nomeAtendente);
+    
+    // Atualiza as mensagens de saudação com o novo nome
+    atualizarNomeAtendente();
+}
+
+// Função para atualizar o nome do atendente nas mensagens ao carregar a página
+function atualizarNomeAtendente() {
+    var nomeAtendente = localStorage.getItem('nomeAtendente') || "Denison"; // Nome padrão "Denison" se não estiver no localStorage
+    
+    const bomDiaTexto = `Bom dia, Sou o atendente ${nomeAtendente}, vou ser responsável pelo seu atendimento. ✅`;
+    const boaTardeTexto = `Boa tarde, Sou o atendente ${nomeAtendente}, vou ser responsável pelo seu atendimento. ✅`;
+    
+    document.getElementById("msgBomDia").textContent = bomDiaTexto;
+    document.getElementById("msgBoaTarde").textContent = boaTardeTexto;
+
+    // Adicionar evento de clique para copiar o texto dos botões
+    document.getElementById("msgBomDia").onclick = () => copiarMensagem(bomDiaTexto);
+    document.getElementById("msgBoaTarde").onclick = () => copiarMensagem(boaTardeTexto);
+}
+
+// Inicializar a página
+document.addEventListener('DOMContentLoaded', function() {
+    // Atualizar o nome do atendente ao carregar a página
+    atualizarNomeAtendente();
+});
+
+// Adicionar evento de clique para ocultar notificações
 document.addEventListener('click', hideNotification);
