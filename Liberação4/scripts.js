@@ -37,6 +37,7 @@ function copiarDados(formId, sectionMessage, footerMessage) {
     const inputs = form.querySelectorAll('input');
     
     inputs.forEach(input => {
+        // Verifica se o campo OBS está vazio e define "N/A" se necessário
         let value = input.value.trim() === '' ? 'N/A' : input.value;
         dados += `${input.previousElementSibling.textContent} ${value}\n`;
     });
