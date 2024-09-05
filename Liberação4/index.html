@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liberação técnica</title>
-    <link rel="icon" href="https://github.com/Denison1298/libera-o/blob/main/Libera%C3%A7%C3%A3o4/img/icon.png?raw=true" type="image/png">
+    <link rel="icon" href="C:\Users\denison.santos\Desktop\Liberação\img\icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Logo Header -->
     <div class="header-logo">
-        <img src="https://github.com/Denison1298/libera-o/blob/main/Libera%C3%A7%C3%A3o4/img/Logo.png?raw=true" alt="Logo" />
+        <img src="C:\Users\denison.santos\Desktop\Liberação\img\Logo.png" alt="Logo" />
         <p class="header-text">Desenvolvido por Denison Santos</p>
     </div>
 
@@ -66,6 +66,10 @@
                 
                 <label>Teste:</label>
                 <input type="text" name="teste" value="OK">
+                
+                <!-- Novo campo OBS -->
+                <label>OBS:</label>
+                <input type="text" name="obs" id="obsInterno">
                 
                 <button type="button" class="copy-button" onclick="copiarDados('interno', 'Certo tudo correto, vou enviar a validação.', 'Ajudo em algo mais?')">Copiar Tudo</button>
                 <button type="button" class="clear-button" onclick="limparCampos('interno')">Limpar Campos</button>
@@ -167,7 +171,7 @@
             <div>
                 <label for="nomeAtendente">Digite o nome do atendente:</label>
                 <input type="text" id="nomeAtendente" placeholder="Exemplo: Denison">
-                <button type="button" onclick="alterarNomeAtendente()">Alterar Nome</button>
+                <button type="button" class="alterar-nome-button" onclick="alterarNomeAtendente()">Alterar Nome</button>
             </div>
 
             <div class="message-area">
