@@ -107,7 +107,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 }
 
 /* Botões */
-.form-section button, .copy-button, .clear-button {
+.form-section button, .copy-button, .clear-button, .alterar-nome-button {
     padding: 14px 28px;
     margin-top: 10px; /* Espaço acima do botão */
     border: none; /* Remove a borda padrão */
@@ -144,6 +144,23 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 
 .clear-button:hover {
     background-color: #c82333; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+/* Novo Estilo para o Botão Alterar Nome */
+.alterar-nome-button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 14px 28px; /* Espaçamento interno */
+    margin-top: 10px; /* Espaço acima do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.alterar-nome-button:hover {
+    background-color: #45a049; /* Cor de fundo verde escuro ao passar o mouse */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
