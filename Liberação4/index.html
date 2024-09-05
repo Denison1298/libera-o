@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liberação técnica</title>
-    <link rel="icon" href="https://github.com/Denison1298/libera-o/blob/main/Libera%C3%A7%C3%A3o4/img/icon.png?raw=true" type="image/png">
+    <link rel="icon" href="C:\Users\denison.santos\Desktop\Liberação\img\icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Logo Header -->
     <div class="header-logo">
-        <img src="https://github.com/Denison1298/libera-o/blob/main/Libera%C3%A7%C3%A3o4/img/Logo.png?raw=true" alt="Logo" />
+        <img src="C:\Users\denison.santos\Desktop\Liberação\img\Logo.png" alt="Logo" />
         <p class="header-text">Desenvolvido por Denison Santos</p>
     </div>
 
@@ -27,7 +27,7 @@
         <div class="tab-content active" id="interno">
             <h2>Interno</h2>
             <p class="message">Certo tudo correto, vou enviar a validação.</p>
-            <form>
+            <form id="interno">
                 <label>Protocolo:</label>
                 <input type="text" name="protocolo">
                 
@@ -76,7 +76,7 @@
         <div class="tab-content" id="externo">
             <h2>Externo</h2>
             <p class="message">Certo tudo correto, vou enviar a validação.</p>
-            <form>
+            <form id="externo">
                 <label>Protocolo:</label>
                 <input type="text" name="protocolo">
                 
@@ -139,7 +139,7 @@
 
         <div class="tab-content" id="remocao">
             <h2>Remoção</h2>
-            <form>
+            <form id="remocao">
                 <label>Código:</label>
                 <input type="text" name="codigo">
                 
@@ -162,9 +162,18 @@
 
         <div class="tab-content" id="saudacoes">
             <h2>Saudações</h2>
+
+            <!-- Campo para alterar o nome do atendente -->
+            <div>
+                <label for="nomeAtendente">Digite o nome do atendente:</label>
+                <input type="text" id="nomeAtendente" placeholder="Exemplo: Denison">
+                <button type="button" onclick="alterarNomeAtendente()">Alterar Nome</button>
+            </div>
+
             <div class="message-area">
-                <button type="button" class="copy-button" onclick="copiarMensagem('Bom dia, Sou o atendente Denison, vou ser responsável pelo seu atendimento. ✅')">Bom dia, Sou o atendente Denison, vou ser responsável pelo seu atendimento. ✅</button>
-                <button type="button" class="copy-button" onclick="copiarMensagem('Boa tarde, Sou o atendente Denison, vou ser responsável pelo seu atendimento. ✅')">Boa tarde, Sou o atendente Denison, vou ser responsável pelo seu atendimento. ✅</button>
+                <!-- As mensagens abaixo serão atualizadas dinamicamente -->
+                <button type="button" class="copy-button" id="msgBomDia">Bom dia, Sou o atendente Denison, vou ser responsável pelo seu atendimento. ✅</button>
+                <button type="button" class="copy-button" id="msgBoaTarde">Boa tarde, Sou o atendente Denison, vou ser responsável pelo seu atendimento. ✅</button>
                 <button type="button" class="copy-button" onclick="copiarMensagem('É o cliente “nome do cliente”? ❓')">É o cliente “nome do cliente”? ❓</button>
                 <button type="button" class="copy-button" onclick="copiarMensagem('Qual foi a tratativa realizada no local? 🤔')">Qual foi a tratativa realizada no local? 🤔</button>
                 <button type="button" class="copy-button" onclick="copiarMensagem('Preciso de uma foto mais ampla, mostrando o cômodo onde estão instalados os equipamentos')">Preciso de uma foto mais ampla, mostrando o cômodo onde estão instalados os equipamentos</button>
@@ -178,6 +187,8 @@
                 <button type="button" class="copy-button" onclick="copiarMensagem('Agradeço seu contato, tenha um bom dia! 🫡')">Agradeço seu contato, tenha um bom dia! 🫡</button>
             </div>
         </div>
+    </div>
+
     <div id="notification" class="notification"></div>
     <script src="scripts.js"></script>
 </body>
