@@ -166,7 +166,10 @@
             <h2>Close remoção</h2>
             <form id="closeremocao">
                 <label>Protocolo:</label>
-                <input type="text" name="codigo">
+                <input type="text" name="protocolo">
+
+                <label>Técnico:</label>
+                <input type="text" name="tecnico">
                 
                 <label>Código:</label>
                 <input type="text" name="codigo">
@@ -174,14 +177,11 @@
                 <label>Nome do Cliente:</label>
                 <input type="text" name="nome_cliente">
                 
-                <label>Antigo Ponto de Acesso:</label>
-                <input type="text" name="antigo_ponto_acesso">
+                <label>Cto:</label>
+                <input type="text" name="cto">
                 
                 <label>Porta:</label>
                 <input type="text" name="porta">
-                
-                <label>Localização CTO:</label>
-                <input type="text" name="localizacao_cto">
                 
                 <button type="button" class="copy-button" onclick="copiarDados('closeremocao', '', '')">Copiar Tudo</button>
                 <button type="button" class="clear-button" onclick="limparCampos('closeremocao')">Limpar Campos</button>
