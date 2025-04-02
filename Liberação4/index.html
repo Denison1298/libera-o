@@ -20,7 +20,8 @@
         <div class="tabs">
             <div class="tab-button active" onclick="showTab('interno')">Interno</div>
             <div class="tab-button" onclick="showTab('externo')">Externo</div>
-            <div class="tab-button" onclick="showTab('remocao')">Remoção</div>
+            <div class="tab-button" onclick="showTab('remocao')">Open remoção</div>
+            <div class="tab-button" onclick="showTab('closeremocao')">Close remoção</div>
             <div class="tab-button" onclick="showTab('saudacoes')">Saudações</div>
         </div>
 
@@ -158,6 +159,29 @@
                 
                 <button type="button" class="copy-button" onclick="copiarDados('remocao', '', '')">Copiar Tudo</button>
                 <button type="button" class="clear-button" onclick="limparCampos('remocao')">Limpar Campos</button>
+            </form>
+        </div>
+
+        <div class="tab-content" id="closeremocao">
+            <h2>Close remoção</h2>
+            <form id="remocao">
+                <label>Código:</label>
+                <input type="text" name="codigo">
+                
+                <label>Nome do Cliente:</label>
+                <input type="text" name="nome_cliente">
+                
+                <label>Antigo Ponto de Acesso:</label>
+                <input type="text" name="antigo_ponto_acesso">
+                
+                <label>Porta:</label>
+                <input type="text" name="porta">
+                
+                <label>Localização CTO:</label>
+                <input type="text" name="localizacao_cto">
+                
+                <button type="button" class="copy-button" onclick="copiarDados('closeremocao', '', '')">Copiar Tudo</button>
+                <button type="button" class="clear-button" onclick="limparCampos('closeremocao')">Limpar Campos</button>
             </form>
         </div>
 
