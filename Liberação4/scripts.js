@@ -1,5 +1,3 @@
-
-
 // Função para exibir a aba clicada
 function showTab(tabId) {
     // Ocultar todas as abas
