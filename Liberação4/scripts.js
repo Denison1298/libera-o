@@ -1,3 +1,78 @@
+// Função para copiar os dados preenchidos no formulário
+function copiarDados(formId) {
+    const formulario = document.getElementById(formId);
+    if (!formulario) return alert("Erro: Formulário não encontrado!");
+
+    let dadosParaCopiar = "***** CLOSE REMOÇÃO *****\n\n";
+    dadosParaCopiar += `Conferente: Denison Santos\n`;
+
+    // Pega os valores de todos os inputs e selects dentro do formulário
+    formulario.querySelectorAll("input, select").forEach(input => {
+        const label = input.previousElementSibling; // Pega a label anterior ao campo
+        if (label && label.tagName === "LABEL") {
+            const textoLabel = label.innerText.trim();
+            dadosParaCopiar += `${textoLabel}: ${input.value}\n`;
+        }
+    });
+
+    // Copiar para a área de transferência
+    navigator.clipboard.writeText(dadosParaCopiar)
+        .then(() => {
+            mostrarAviso("✅ Dados copiados com sucesso!");
+        })
+        .catch(() => {
+            mostrarAviso("❌ Erro ao copiar os dados.");
+        });
+}
+
+// Função para exibir um aviso na tela
+function mostrarAviso(mensagem) {
+    let avisoExistente = document.getElementById("aviso-copiado");
+    if (avisoExistente) avisoExistente.remove();
+
+    let aviso = document.createElement("div");
+    aviso.id = "aviso-copiado";
+    aviso.innerText = mensagem;
+    aviso.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        cursor: pointer;
+    `;
+
+    document.body.appendChild(aviso);
+
+    setTimeout(() => {
+        aviso.remove();
+    }, 3000);
+
+    aviso.addEventListener("click", () => aviso.remove());
+}
+
+// Função para limpar os campos do formulário
+function limparCampos(formId) {
+    const formulario = document.getElementById(formId);
+    if (!formulario) return alert("Erro: Formulário não encontrado!");
+
+    formulario.querySelectorAll("input, select").forEach(input => {
+        if (input.tagName === "SELECT") {
+            input.selectedIndex = 0;
+        } else {
+            input.value = "";
+        }
+    });
+
+    mostrarAviso("✅ Todos os campos foram limpos!");
+}
+
 // Função para exibir a aba clicada
 function showTab(tabId) {
     // Ocultar todas as abas
