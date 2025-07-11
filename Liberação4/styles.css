@@ -209,3 +209,17 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
     max-width: 100%;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
 }
+
+.swal-confirm-button {
+    background-color: #4CAF50; /* Cor de fundo do botão "Sim, limpar!" */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.swal-cancel-button {
+    background-color: #f44336; /* Cor de fundo do botão "Cancelar" */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
