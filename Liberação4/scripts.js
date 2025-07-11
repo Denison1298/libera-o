@@ -51,16 +51,45 @@ function copiarDados(formId, sectionMessage, footerMessage) {
     });
 }
 
-// Função para limpar campos do formulário
+// Função para limpar campos do formulário com confirmação
 function limparCampos(formId) {
-    const form = document.getElementById(formId);
-    const inputs = form.querySelectorAll('input');
+    const tabNames = {
+        'interno': 'Interno',
+        'externo': 'Externo',
+        'remocao': 'Remoção',
+        'closeremocao': 'Close Remoção',
+        'saudacoes': 'Saudações'
+    };
+    const tabName = tabNames[formId] || 'este formulário';
     
-    inputs.forEach(input => {
-        if (input.defaultValue === '') {
-            input.value = '';
+    Swal.fire({
+        title: 'Tem certeza?',
+        text: `Você deseja limpar todos os campos do formulário ${tabName}?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, limpar!',
+        cancelButtonText: 'Cancelar',
+        buttonsStyling: true,
+        customClass: {
+            confirmButton: 'swal-confirm-button',
+            cancelButton: 'swal-cancel-button'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const form = document.getElementById(formId);
+            const inputs = form.querySelectorAll('input');
+            
+            inputs.forEach(input => {
+                if (input.defaultValue === '') {
+                    input.value = '';
+                } else {
+                    input.value = input.defaultValue;
+                }
+            });
+            
+            showNotification("Campos limpos com sucesso!");
         } else {
-            input.value = input.defaultValue;
+            showNotification("Ação de limpar campos cancelada.");
         }
     });
 }
